@@ -1,10 +1,13 @@
 {% load static %}
 <html lang="en">
+<head>
 <title>饺子的小网站</title>
 {% load static %}
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
 
-<div>
+    <script src="{% static 'js/imgEnlarge.js' %}"></script>
+    <script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+
     <style>* { box-sizing: border-box; } 
     body {margin: 0;}*{box-sizing:border-box;}
     body{margin-top:0px;
@@ -18,6 +21,8 @@
         Roboto, Arial, 
         "PingFang SC", "Hiragino Sans GB", "Microsoft Yahei", "Microsoft Jhenghei", 
         sans-serif;}. panel{color:rgb(51, 51, 51);font-weight:100;}. logo path{pointer-events:none;fill:none;stroke-linecap:round;stroke-width:7;stroke:rgb(255, 255, 255);}.description{text-align:center;font-size:1em;font-weight:500;line-height:1.8rem;margin-bottom:1rem;}.wechat-group{text-align:center;padding-bottom:10px;}.wechat-group img{max-width:220px;height:auto;border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-right-radius:8px;border-bottom-left-radius:8px;margin-top:0px;margin-right:auto;margin-bottom:0px;margin-left:auto;width:100%;}.welcome-img img{width:100%;}.bg-gradient-primary{border-top-left-radius:8px;border-top-right-radius:8px;border-bottom-right-radius:8px;border-bottom-left-radius:8px;}.wechat-group.pb-12{text-align:left;}.c2966{color:black;text-align:center;}.c1520{text-align:left;width:220px;en:1;}@media (max-width: 480px){.c1520{text-align:center;}.wechat-group.pb-12{text-align:center;}}</style>
+</head>
+<body>
     <div id="default-editor-page__placeholder" class="panel">
         <link rel="stylesheet" href="{% static 'css/plugins.css' %}"/>
         <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
@@ -30,16 +35,16 @@
                         <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">欢迎访问饺子的神奇小网站！</p></div>
                     <!-- /column --></div><!-- /.row --><!-- /div -->
                 
-<div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
            <form action="{% url 'friend' %}" method="post">
         {% csrf_token %}
        <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">饺子的小伙伴们</button></span>
     </form>
-</div>
+    </div>
                 <div class="d-flex justify-content-center">
                     <form action="{% url 'lingyu' %}" method="post">
                         {% csrf_token %}
-                        <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">玲域宝宝的专页</button> </span>
+                        <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">玲域的专页</button> </span>
                     </form>
                 </div>
                 <div class="d-flex justify-content-center">
@@ -48,7 +53,7 @@
                         {% csrf_token %}
                         <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">饺子的Java教学视频</button> </span>
                     </form>
-</div>
+    </div>
                 <div class="row mt-10"><div class="col-lg-8 mx-auto">
                 <figure></figure></div>
                 <!-- /column --></div><!-- /.row --></div><!-- /.container -->
@@ -59,8 +64,24 @@
                     <h2 class="display-1 mb-4">饺子的各大平台及QQ群</h2>
                     <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">欢迎扩列关注进群哦～</p>
                 </div><!-- /column --></div>
-        </div></section><div class="wechat-group pb-12"><img src="{% static 'img/187907ae507236acb95f8b8e235a46d4.jpg' %}" alt="QQ-group-QR" id="isjg4" class="c1520"/>
-        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" class="c2966"/><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgc3R5bGU9ImZpbGw6IHJnYmEoMCwwLDAsMC4xNSk7IHRyYW5zZm9ybTogc2NhbGUoMC43NSkiPgogICAgICAgIDxwYXRoIGQ9Ik04LjUgMTMuNWwyLjUgMyAzLjUtNC41IDQuNSA2SDVtMTYgMVY1YTIgMiAwIDAgMC0yLTJINWMtMS4xIDAtMiAuOS0yIDJ2MTRjMCAxLjEuOSAyIDIgMmgxNGMxLjEgMCAyLS45IDItMnoiPjwvcGF0aD4KICAgICAgPC9zdmc+" class="c2966"/></div>
+        </div></section>
+<img src="{% static 'img/187907ae507236acb95f8b8e235a46d4.jpg' %}" alt="douyin-QR" id="isjg4" class="c1520" title="饺子的抖音"/>
+        <img src="{% static 'img/bilibili.jpg' %}" alt="bilibili-QR" id="isjg4" class="c1520" title="饺子的小破站">
+        <img src="{% static 'img/csdn.png' %}" style="width: 600px; height: 300px" title="饺子的CSDN" alt="CSDN-QR">
+        <img src="{% static 'img/kuaishou.jpg' %}" class="c1520" title="饺子的快手" alt="Kuaishou-QR">
+         <div id="default-editor-page__placeholder" class="panel">
+        <link rel="stylesheet" href="{% static 'css/plugins.css' %}"/>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+        
+        <section class="wrapper bg-gradient-primary">
+            <div class="container py-18 pt-md-14 pb-md-14">
+                <div class="row text-center">
+                    <div class="col-lg-9 col-xxl-7 mx-auto">
+                        
+                        <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">因一些原因，暂不开放Q群二维码</p></div>
+        <div class="wechat-group pb-12">
         <div class="description">© 2024 饺子 版权所有</div>
-    <div class="description">网站已开源至GitHub</div></div></div>
+            <div class="description"><a href="https://github.com/lizhuolong20071001/jiaozi-web">网站已开源至GitHub</a></div></div>
+</body>
+
 </html>
