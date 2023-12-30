@@ -26,4 +26,13 @@ def download_api(request):
         return HttpResponse(c)
 
 
+def friend(request):
+    return render(request,'friend.html')
 
+
+def lingyu(request):
+    return render(request,'lingyu.html')
+
+
+def java(request):
+    return render(request,'java.html')

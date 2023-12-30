@@ -29,14 +29,25 @@
                         <h2 class="display-1 mb-4">饺子的网站主页</h2>
                         <p class="lead fs-24 lh-sm px-md-5 px-xl-15 px-xxl-10 mb-7">欢迎访问饺子的神奇小网站！</p></div>
                     <!-- /column --></div><!-- /.row --><!-- /div -->
-                <div class="d-flex justify-content-center">
-                    <span><a href="" class="btn btn-lg btn-primary rounded-pill mx-1">饺子的小伙伴们</a>
-                    </span><span></span></div>
+                
 <div class="d-flex justify-content-center">
-    <a href="" class="btn btn-lg btn-outline-primary rounded-pill mx-1">玲域特别页面</a>
+           <form action="{% url 'friend' %}" method="post">
+        {% csrf_token %}
+       <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">饺子的小伙伴们</button></span>
+    </form>
 </div>
                 <div class="d-flex justify-content-center">
-    <a href="" class="btn btn-lg btn-outline-primary rounded-pill mx-1">饺子的Java教学视频</a>
+                    <form action="{% url 'lingyu' %}" method="post">
+                        {% csrf_token %}
+                        <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">玲域宝宝的专页</button> </span>
+                    </form>
+                </div>
+                <div class="d-flex justify-content-center">
+
+                    <form action="{% url 'java' %}" method="post">
+                        {% csrf_token %}
+                        <span><button type="submit" class="btn btn-lg btn-primary rounded-pill mx-1">饺子的Java教学视频</button> </span>
+                    </form>
 </div>
                 <div class="row mt-10"><div class="col-lg-8 mx-auto">
                 <figure></figure></div>

@@ -24,6 +24,9 @@ from django.conf import settings ##新增
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', demo.index, name='index'),
+    path('friend/',demo.friend, name='friend'),
+    path('lingyu/',demo.lingyu, name='lingyu'),
+    path('Java/',demo.java, name='java'),
     re_path(r'^api/$', demo.version_api),
     re_path(r'^download/$', demo.download_api),
     re_path(r'^static/(?P<path>.*)$', static.serve,
